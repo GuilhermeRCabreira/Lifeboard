@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LifeBoard</title>
+</head>
+<body>
+
+<h1>LifeBoard</h1>
+
+<p>Login realizado com sucesso!</p>
+
+<p>Você está na página inicial.</p>
+
+<form class="navbar-form" th:action="@{/logout}" method="post">
+    <button class="btn-link">SAIR</button>
+    <div class="navbar-form">
+        <a class="btn-link" href="#" th:href="@{/alterar-senha}">Alterar senha</a>
+    </div>
+</form>
+
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Recuperar senha</title>
+</head>
+
+<body>
+<main class="container">
+    <section class="card form-card">
+        <h2 class="title">Recuperar senha</h2>
+
+        <div class="alert alert-success text-center text-uppercase" th:if="${param.verificar != null}">
+            <p>
+                <strong>Verifique seu email para redefinir sua senha!</strong>
+            </p>
+        </div>
+
+        <div class="alert alert-danger text-center text-uppercase" th:if="${erro}">
+            <p th:text="${erro}"></p>
+        </div>
+
+        <form method="post" th:action="@{/esqueci-minha-senha}">
+            <div class="form-group">
+                <label for="email" class="required">Digite o email cadastrado:</label>
+                <input id="email" name="email" type="email" class="form-control"
+                       placeholder="email@email.com" required="required">
+            </div>
+
+            <button class="btn btn-primary" title="Enviar link de recuperação">
+                Confirmar
+            </button>
+        </form>
+
+        <p class="text-center">
+            <a th:href="@{/login}">Voltar para o login</a>
+        </p>
+    </section>
+</main>
+</body>
+</html>
