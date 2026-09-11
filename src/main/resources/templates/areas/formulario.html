@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="pt-br" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Área</title>
+</head>
+<body>
+<h1>Área</h1>
+
+<div th:if="${erro}" style="color:red;">
+    <p th:text="${erro}"></p>
+</div>
+
+<form th:action="${acao}" th:object="${areaDto}" method="post">
+    <div>
+        <label for="nome">Nome:</label>
+        <input id="nome" type="text" th:field="*{nome}">
+    </div>
+    <button type="submit">Salvar</button>
+</form>
+
+<a th:href="@{/areas}">Cancelar</a>
+</body>
+</html>

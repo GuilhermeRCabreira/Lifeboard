@@ -1,7 +1,7 @@
 package com.lifeboard.controller;
 
 import com.lifeboard.domain.usuario.UsuarioService;
-import com.lifeboard.dto.DadosRecuperacaoConta;
+import com.lifeboard.domain.usuario.dto.DadosRecuperacaoConta;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;

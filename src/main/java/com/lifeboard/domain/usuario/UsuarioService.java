@@ -1,9 +1,9 @@
 package com.lifeboard.domain.usuario;
 
 import com.lifeboard.domain.usuario.email.EmailService;
-import com.lifeboard.dto.AlteracaoSenhaUsuarioDto;
-import com.lifeboard.dto.CadastroUsuarioDto;
-import com.lifeboard.dto.DadosRecuperacaoConta;
+import com.lifeboard.domain.usuario.dto.AlteracaoSenhaUsuarioDto;
+import com.lifeboard.domain.usuario.dto.CadastroUsuarioDto;
+import com.lifeboard.domain.usuario.dto.DadosRecuperacaoConta;
 import jakarta.persistence.EntityNotFoundException;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;

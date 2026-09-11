@@ -2,8 +2,8 @@ package com.lifeboard.controller;
 
 import com.lifeboard.domain.usuario.Usuario;
 import com.lifeboard.domain.usuario.UsuarioService;
-import com.lifeboard.dto.AlteracaoSenhaUsuarioDto;
-import com.lifeboard.dto.CadastroUsuarioDto;
+import com.lifeboard.domain.usuario.dto.AlteracaoSenhaUsuarioDto;
+import com.lifeboard.domain.usuario.dto.CadastroUsuarioDto;
 import jakarta.validation.Valid;
 import org.springframework.security.core.annotation.AuthenticationPrincipal;
 import org.springframework.stereotype.Controller;
