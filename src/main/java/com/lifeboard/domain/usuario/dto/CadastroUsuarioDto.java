@@ -1,4 +1,4 @@
-package com.lifeboard.dto;
+package com.lifeboard.domain.usuario.dto;
 
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotBlank;

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Minhas Áreas</title>
+</head>
+<body>
+<h1>Minhas Áreas</h1>
+
+<a th:href="@{/areas/nova}">Nova área</a>
+
+<table border="1">
+    <thead>
+    <tr>
+        <th>Nome</th>
+        <th>Ações</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="area : ${areas}">
+        <td th:text="${area.nome}"></td>
+        <td>
+            <a th:href="@{/areas/{id}/editar(id=${area.id})}">Editar</a>
+
+            <form th:action="@{/areas/{id}/excluir(id=${area.id})}" method="post" style="display:inline"
+                  onsubmit="return confirm('Tem certeza que deseja excluir esta área?');">
+                <button type="submit">Excluir</button>
+            </form>
+        </td>
+    </tr>
+    </tbody>
+</table>
+
+<p th:if="${#lists.isEmpty(areas)}">Você ainda não tem nenhuma área cadastrada.</p>
+
+<a th:href="@{/}">Voltar para a home</a>
+</body>
+</html>
